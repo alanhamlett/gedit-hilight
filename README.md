@@ -17,6 +17,6 @@ For Windows:
 Usage
 --------
 
-Select a word (double click) or any non-word string and press `Alt-D` to highlight all occurances of that string.
-Select nothing and press Alt+D to remove any highlights and return the text to original color.
+Select a word (double click) or any non-word string and press `Ctrl-Shift-F` to highlight all occurances of that string.
+Select nothing and press `Ctrl-Shift-F` to remove any highlights and return the text to original color.
 

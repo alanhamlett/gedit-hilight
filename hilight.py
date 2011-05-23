@@ -28,7 +28,7 @@ class HilightPyWindowHelper():
 	def _insert_menu(self):
 		manager = self._window.get_ui_manager()
 		self._action_group = gtk.ActionGroup("Hilight")
-		self._action_group.add_actions([("HighlightSelection", None, _("Highlight Selection"), "<Alt>D", _("Highlight Selection"), lambda a: self.hilight())])
+		self._action_group.add_actions([("HighlightSelection", None, _("Highlight Selection"), "<Ctrl><Shift>F", _("Highlight Selection"), lambda a: self.hilight())])
 		manager.insert_action_group(self._action_group, -1)
 		self._ui_id = manager.add_ui_from_string(ui_str)
 
