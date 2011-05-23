@@ -6,7 +6,12 @@ A gedit plugin that adds support for selecting a string and highlighting all occ
 Installation
 --------------
 
+For Unix/Linux:
 - Move `hilight.gedit-plugin` and `hilight.py` into `~/.gnome2/gedit/plugins`
+- In Gedit, go to Edit &rarr; Preferences &rarr; Plugins to enable the plugin.
+
+For Windows:
+- Move `hilight.gedit-plugin` and `hilight.py` into `C:\Program Files\gedit\lib\gedit-2\plugins`
 - In Gedit, go to Edit &rarr; Preferences &rarr; Plugins to enable the plugin.
 
 Usage
