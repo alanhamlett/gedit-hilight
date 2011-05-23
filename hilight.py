@@ -39,11 +39,22 @@ class HilightPyWindowHelper():
 		manager.ensure_update()
 
 	def update_ui(self):
-		print "Update UI"
+		self._action_group.set_sensitive(True)
 
-	def hilight(self,action=None,start=None,end=None):
-		print "Hilight selection"
-
+	def hilight(self,action=None,s=None,e=None):
+		doc = self._window.get_active_document()
+		if doc:
+			start = doc.get_start_iter()
+			end = doc.get_end_iter()
+			tag = doc.get_tag_table().table.lookup('hilightsel')
+			if tag == None:
+				tag = doc.create_tag('hilightsel', background="#00FF00")
+			doc.remove_tag(tag, start, end)
+			if doc.get_has_selection():
+				(s, e) = doc.get_selection_bounds()
+				text = s.get_text(e)
+				for (a, b) in start.forward_search(text, gtk.TEXT_SEARCH_VISIBLE_ONLY):
+					doc.apply_tag(tag, a, b)
 
 class HilightPyPlugin(gedit.Plugin):
 	def __init__(self):
