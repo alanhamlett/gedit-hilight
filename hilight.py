@@ -73,3 +73,4 @@ class HilightPyPlugin(gedit.Plugin):
 		del self._instances[window]
 	def update_ui(self, window):
 		self._instances[window].update_ui()
+
