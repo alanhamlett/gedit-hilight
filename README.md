@@ -7,6 +7,9 @@ Installation
 --------------
 
 ####Unix/Linux
+* If you're using Ubuntu 14.04(32-bit);
+* * (32-bit) move `hilight.gedit-plugin` and `hilight.py` to `/usr/lib/i386-linux-gnu/gedit/plugins/` 
+* * (64-bit) move `hilight.gedit-plugin` and `hilight.py` to`/usr/lib/x86_64-linux-gnu/gedit/plugins/`
 * Move `hilight.gedit-plugin` and `hilight.py` into `~/.gnome2/gedit/plugins`.
 * In Gedit, go to Edit &rarr; Preferences &rarr; Plugins to enable the plugin.
 
